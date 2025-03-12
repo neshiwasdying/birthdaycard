@@ -1,112 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* --- Untuk Layar Kecil (HP) --- */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        overflow: auto; /* Agar bisa di-scroll di HP */
+        padding: 10px;
+    }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
-}
+    .flipbook {
+        width: 100%;  /* Gunakan lebar penuh */
+        height: auto;  /* Tinggi otomatis menyesuaikan konten */
+    }
 
-body {
-    display: grid;
-    place-content: center;
-    height: 100vh;
-    width: 100vw;
-	overflow: hidden;
-	background: #e7a9d7;
-}
+    .flipbook .page {
+        padding: 10px;
+    }
 
-.flipbook {
-    width: 1000px;
-    height: 600px;
-}
+    .novel-container {
+        height: auto;
+        padding: 10px;
+    }
 
-.flipbook .hard {
-    background: #ff4e89 !important;
-    color: #fff;
-    font-weight: bold;
-    border: none; 
-}
+    .novel-page {
+        max-width: 100%; /* Biarkan penuh di HP */
+        max-height: none; /* Tidak membatasi tinggi */
+        padding: 15px;
+    }
 
-.flipbook .hard small{
-	font-style: italic;
-	font-weight: lighter;
-	opacity: 0.7;
-	font-size: 14px;
-}
+    .text {
+        font-size: 20px; /* Ukuran teks lebih kecil agar pas di layar HP */
+        top: auto;
+    }
 
-.flipbook .page {
-    background: white;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-    gap: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.11);
-}
-
-.text {
-    position: relative;
-    top: 480px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-   
-}
-
-.novel-container {
-    width: 100%;
-    height: 100vh; /* Menggunakan tinggi penuh layar */
-    overflow: auto; /* Memungkinkan scrolling jika kontennya lebih panjang */
-    display: flex;
-    justify-content: center; /* Menempatkan konten di tengah */
-    align-items: center;
-    padding: 20px; /* Memberi ruang agar tidak mepet ke tepi layar */
-}
-
-.novel-page {
-    display: block;
-    line-height: 1.5;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: left; /* Memastikan teks rata kiri */
-    max-width: 600px; /* Menentukan lebar maksimum agar lebih nyaman dibaca */
-    background: white;
-    padding: 20px;
-    border-radius: 10px; /* Memberikan sudut yang lebih halus */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk tampilan lebih elegan */
-    overflow-y: auto; /* Jika konten terlalu panjang, memungkinkan scroll dalam div */
-    max-height: 80vh; /* Menghindari konten keluar dari layar */
-}
-
-.novel-page p {
-    text-indent: 25px; /* Indentasi paragraf seperti novel */
-    margin-bottom: 10px; /* Jarak antar paragraf */
-}
-
-.novel-page strong {
-    font-size: 18px; /* Ukuran lebih besar untuk judul */
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px; /* Jarak bawah judul */
-}
-
-.novel-page .signature {
-    text-align: left; /* Memastikan tanda tangan tetap rata kiri */
-    font-style: italic;
-    font-size: 14px;
-    margin-top: 20px; /* Jarak dari paragraf sebelumnya */
-}
-
-.page img{
-    position: relative;
-    top: -20px;
-	width: 60%;
-	object-fit: cover;
-	margin: auto;
-}
-
-.flipbook .page small{
-	font-size: 11px;
-    margin-bottom: 10px;
+    .page img {
+        width: 80%; /* Ubah ukuran gambar agar tidak terlalu besar */
+    }
 }
